@@ -1,0 +1,32 @@
+metadata:
+  title: Subsidized Housing determination
+  short title: housingtype
+
+---
+modules:
+  - docassemble.base.util
+
+---
+generic object: DAObject
+question: |
+  Special Population
+fields:
+  - Veteran?: x.veteran
+    datatype: yesno
+  - Active Duty?: x.activeduty
+    datatype: yesno
+  - Senior ( 60 or older?): x.senior
+    datatype: yesno
+  - Senior in household?: x.seniorinhousehold
+    datatype: yesno
+    hide if: x.senior
+  - Disability determination?: x.disability
+    datatype: yesno
+  - Self-identified disability?: x.selfidentifieddisability
+    datatype: yesno
+    hide if: x.disability
+  - Victim of domestic violence?: x.domesticviolencevictim
+    datatype: yesno
+  - Child under 12 in household?: x.childunder12inhousehold
+    datatype: yesno
+    

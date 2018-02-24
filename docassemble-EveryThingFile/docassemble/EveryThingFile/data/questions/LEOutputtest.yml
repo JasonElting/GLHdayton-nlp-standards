@@ -1,0 +1,21 @@
+metadata:
+  title: LegalElements Output Screen
+  short title: LEOutput
+  documentation: 
+  example start: 2
+  example end: 5
+---
+modules:
+  - docassemble.base.util
+---
+objects from file:
+  - protocols: protocols.yml
+---
+mandatory: True
+question: |
+  Information about your address
+subquestion: |
+  The address you provided is: 
+  
+  ${ protocols } 
+  

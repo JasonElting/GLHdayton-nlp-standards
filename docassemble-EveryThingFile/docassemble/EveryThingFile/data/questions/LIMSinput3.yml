@@ -1,0 +1,157 @@
+metadata:
+  title: LIMS Input
+  short title: LIMSinput.yml
+---
+modules:
+  - docassemble.base.util
+---
+objects:
+  - lim: DAObject
+  - lim.elements: DAList
+  - lim.remedies: DAList
+  - lim.tools: DAList
+  - lim.legalcite: DAList
+  - plainenglish.lists: DAList
+  - plainenglish.paragraphs: DAList
+  - plainenglish.steps: DAList
+  - plainenglish.terms: DAList
+   
+  
+---
+mandatory: True
+code: |
+  lim.elements.object_type = DAObject
+  lim.remedies.object_type = DAObject
+  lim.tools.object_type = DAObject
+  lim.legalcite.object_type = DAObject
+  lim.legalcite.minimum_number = 1
+
+---
+generic object: DAObject
+question:
+  Add plain english help for ${ x }
+fields:
+  - Pic: x.plainenglish.pic
+    datatype: file
+    required: False
+  - Link: x.plainenglish.link
+  - Lists: x.plainenglish.lists.there_are_any
+    datatype: yesno
+  - Paragraphs: x.plainenglish.paragraphs.there_are_any
+    datatype: yesno
+  - Steps: x.plainenglish.steps.there_are_any
+    datatype: yesno
+  - Terms: x.plainenglish.terms.there_are_any
+    datatype: yesno
+
+---
+question: |
+  ${ordinal(i) } LegalCite for ${ lim.name }
+fields:
+ - Type of law: lim.legalcite[i].typeoflaw
+ - Citation: lim.legalcite[i].citation
+ - Quotation: lim.legalcite[i].quotation
+ - Full text: lim.legalcite[i].fulltext
+ - PDF: lim.legalcite[i].pdf
+   datatype: file
+   required: False
+ - Add Another: lim.legalcite.there_is_another
+   datatype: yesno
+---
+question: |
+  ${ordinal(i) } Remedy for ${ lim.name }
+fields:
+ - Type of remedy: lim.remedies[i].typeofremedy
+ - Citation: lim.remedies[i].citation
+ - Quotation: lim.remedies[i].quotation
+---
+question: |
+  ${ordinal(i) } Tool for ${ lim.name }
+fields:
+ - Type of tool: lim.tool[i].typeoftool
+
+---
+question: |
+  ${ordinal(i) } Element for ${ lim.name }
+fields:
+ - Name: lim.element[i].name
+ - Element or Fact: lim.element[i].elementorfact
+   choices:
+     - Element
+     - Fact
+ - Question: lim.legalcite[i].question
+   show if:
+     variable: lim.element[i].elementorfact
+     is: Fact
+ - Variable: lim.element[i].questionvariable
+   show if:
+     variable: lim.element[i].elementorfact
+     is: Fact
+
+---
+question: |
+  Special Problem Code Assignment
+fields:
+  - "Name": lim.name
+  - "Parent": lim.parent
+  - "Type of Housing": lim.typeofhousing
+  - "Stage": lim.stage
+  - "Explanation": lim.description
+
+---
+mandatory: True
+question: |
+  Summary for ${ lim.name}
+subquestion: |
+  **Explanation**: ${ lim.description }
+  
+  **Parent**: ${ lim.parent }
+  
+  **Type of Housing**: ${ lim.typeofhousing }
+  
+  **Stage**: ${ lim.stage }
+
+  
+  **LegalCite**: 
+  
+  % for thing in lim.legalcite:
+  ${ thing }
+  % endfor
+   
+  **Elements**: 
+  
+  % for thing in lim.element:
+  ${ thing }
+  % endfor
+   
+  **Remedies**: 
+  
+  % for thing in lim.remedies:
+  ${ thing }
+  % endfor
+   
+  **Tools**: 
+  
+  % for thing in lim.tool:
+  ${ thing }
+  % endfor
+  
+  [Edit]( ${ url_action('review_answers') })
+---
+event: review_answers
+question: |
+  Summary for ${ lim.name }
+review:
+  - Edit: lim.description
+    button: |
+      **Explanation**: ${ lim.description }
+  - Edit: lim.element
+    button: |
+      **Element**: ${ lim.element }
+  - Edit: lim.remedies
+    button: |
+      **Remedies**: ${ lim.remedies }
+  - Edit: lim.tool
+    button: |
+      **Tool**: ${ lim.tool }
+---

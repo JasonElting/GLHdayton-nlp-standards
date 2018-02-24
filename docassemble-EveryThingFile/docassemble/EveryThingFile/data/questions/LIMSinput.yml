@@ -1,0 +1,75 @@
+metadata:
+  title: LIMS Input
+  short title: LIMSinput.yml
+---
+modules:
+  - docassemble.base.util
+  - yaml
+---
+imports:
+  - PIL
+---
+objects:
+  - lim: DAObject
+  - objectoutput: DAStaticFile.using(filename='objectoutput.yml')
+---
+question: |
+  Special Problem Code Assignment
+fields:
+  - "Name": lim.name
+  - "Parent": lim.parent
+  - "Type of Housing": lim.typeofhousing
+  - "Stage": lim.stage
+---
+code: |
+  lim.specialproblemcode = lim.typeofhousing + lim.parent + lim.name + lim.stage
+---
+question: |
+  ${ lim.specialproblemcode }
+fields:
+  - "Explanation": lim.description
+  - "Link": lim.link 
+  - "Type Of Rule": lim.typeofrule 
+  - "Quotation": lim.quotation 
+  - "Citation": lim.citation
+---
+mandatory: True
+code: |
+  objectoutput.write(lim)
+---
+mandatory: True
+question: |
+  Summary for ${ lim.specialproblemcode }
+subquestion: |
+  **Explanation**: ${ lim.description }
+  
+  **Link**: ${ lim.link }
+  
+  **Type Of Rule**: ${ lim.typeofrule }
+  
+  **Quotation**: ${ lim.quotation }
+  
+  **Citation**: ${ lim.citation }
+  
+  [Edit]( ${ url_action('review_answers') })
+---
+event: review_answers
+question: |
+  Summary for ${ lim.specialproblemcode }
+review:
+  - Edit: lim.description
+    button: |
+      **Explanation**: ${ lim.description }
+  - Edit: lim.link
+    button: |
+      **Link**: ${ lim.link }
+  - Edit: lim.typeofrule
+    button: |
+      **Type Of Rule**: ${ lim.typeofrule }
+  - Edit: lim.quotation
+    button: |
+      **Quotation**: ${ lim.quotation }
+  - Edit: lim.citation
+    button: |
+      **Citation**: ${ lim.citation }
+---

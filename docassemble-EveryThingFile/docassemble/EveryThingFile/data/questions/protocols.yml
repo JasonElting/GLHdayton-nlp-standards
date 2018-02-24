@@ -1,0 +1,52 @@
+object: DAObject
+module: docassemble.base.util
+items:
+	- name:
+			object: DAObject
+			item:
+				destination: Housing & Community Economic Development
+		locationreqs:
+		  - Allen County
+		  - Auglaize County
+		  - Champaign County
+		  - Clark County
+		  - Darke County
+		  - Erie County
+		  - Greene County
+		  - Hancock County
+		  - Hardin County
+		  - Huron County
+		  - Logan County
+		  - Mercer County
+		  - Miami County
+		  - Montgomery County
+		  - Ottawa County
+		  - Preble County
+		  - Sandusky County
+		  - Seneca County
+		  - Shelby County
+		  - Wood County
+		  - Wyandot  County 
+		specialpopulationreqs:
+			- Senior
+		problemcodereqs:
+			- Eviction
+		housingtypereqs:
+			- Public Housing
+			- Voucher
+			- HUD Subsidized Housing
+			- RD Housing
+		fromwebpage: Lives in subsidized housing (public housing, Section 8 Housing Choice Voucher, HUD subsidized housing or USDA/rural housing) and is being evicted.
+	- name:
+			object: DAObject
+			item:
+				destination: LAWO Special Projects
+		locationreqs:
+		  - Lucas County
+		problemcodereqs:
+			- Eviction
+		housingtypereqs:
+			- Public Housing
+			- Voucher
+			- HUD Subsidized Housing
+		fromwebpage: Subsidized Housing Eviction

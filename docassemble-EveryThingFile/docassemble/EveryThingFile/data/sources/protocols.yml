@@ -1,0 +1,276 @@
+object: DAObject
+module: docassemble.base.util
+items:
+  - name:
+      object: DAObject
+      item:
+        name: HCED1a
+    counties:
+      - Ashland County
+      - Auglaize County
+      - Champaign County
+      - Clark County
+      - Crawford County
+      - Darke County
+      - Defiance County
+      - Erie County
+      - Fulton County
+      - Greene County
+      - Hancock County
+      - Hardin County
+      - Henry County
+      - Huron County
+      - Logan County
+      - Mercer County
+      - Miami County
+      - Montgomery County
+      - Ottawa County
+      - Paulding County
+      - Preble County
+      - Putnam County
+      - Richland County
+      - Sandusky County
+      - Seneca County
+      - Shelby County
+      - Van Wert County
+      - Williams County
+      - Wood County
+      - Wyandot County
+    typeofhousing:
+      - A1
+    specialpopulation:
+      - Senior in Household
+      - Child under 12 in household
+    problem:
+      - Lockout
+      - Utility Shutoff
+    stage:
+    opposingparty:
+    destination: Housing and Comm. Econ. Dev.
+    facts: Client must have money to pay rent or would like to remain in unit.  Do not refer if utility shutoff is due to clients failure to pay an account in clients name AND client received valid prior notice from utility.
+  - name:
+      object: DAObject
+      item:
+        name: HCED1b
+    counties:
+      - Ashland County
+      - Auglaize County
+      - Champaign County
+      - Clark County
+      - Crawford County
+      - Darke County
+      - Defiance County
+      - Erie County
+      - Fulton County
+      - Greene County
+      - Hancock County
+      - Hardin County
+      - Henry County
+      - Huron County
+      - Logan County
+      - Mercer County
+      - Miami County
+      - Montgomery County
+      - Ottawa County
+      - Paulding County
+      - Preble County
+      - Putnam County
+      - Richland County
+      - Sandusky County
+      - Seneca County
+      - Shelby County
+      - Van Wert County
+      - Williams County
+      - Wood County
+      - Wyandot County
+    typeofhousing:
+    specialpopulation:
+      - Domestic Violence Victim
+    problem:
+    stage:
+    opposingparty:
+    destination: Housing and Comm. Econ. Dev.
+    facts: The housing problem must be a result of domestic violence.
+  - name:
+      object: DAObject
+      item:
+        name: HCED2a
+    counties:
+      - Ashland County
+      - Auglaize County
+      - Champaign County
+      - Clark County
+      - Crawford County
+      - Darke County
+      - Defiance County
+      - Erie County
+      - Fulton County
+      - Greene County
+      - Hancock County
+      - Hardin County
+      - Henry County
+      - Huron County
+      - Logan County
+      - Mercer County
+      - Miami County
+      - Montgomery County
+      - Ottawa County
+      - Paulding County
+      - Preble County
+      - Putnam County
+      - Richland County
+      - Sandusky County
+      - Seneca County
+      - Shelby County
+      - Van Wert County
+      - Williams County
+      - Wood County
+      - Wyandot County
+    typeofhousing:
+      - A3
+      - A4
+      - A5
+      - A5X
+      - A6X
+      - A7
+      - A8
+    specialpopulation:
+    problem:
+      - Lockout
+      - Utility Shutoff
+    stage:
+    opposingparty:
+    destination: Housing and Comm. Econ. Dev.
+    facts: Do not refer if utility shutoff is due to clients failure to pay an account in clients name AND client received valid prior notice from utility.
+  - name:
+      object: DAObject
+      item:
+        name: HCED2b
+    counties:
+      - Ashland County
+      - Auglaize County
+      - Champaign County
+      - Clark County
+      - Crawford County
+      - Darke County
+      - Defiance County
+      - Erie County
+      - Fulton County
+      - Greene County
+      - Hancock County
+      - Hardin County
+      - Henry County
+      - Huron County
+      - Logan County
+      - Mercer County
+      - Miami County
+      - Montgomery County
+      - Ottawa County
+      - Paulding County
+      - Preble County
+      - Putnam County
+      - Richland County
+      - Sandusky County
+      - Seneca County
+      - Shelby County
+      - Van Wert County
+      - Williams County
+      - Wood County
+      - Wyandot County
+    typeofhousing:
+      - A3
+      - A4
+      - A5
+      - A5X
+      - A6X
+      - A7
+      - A8
+    specialpopulation:
+      - Domestic Violence Victim
+    problem:
+    stage:
+    opposingparty:
+    destination: Housing and Comm. Econ. Dev.
+    facts: The housing problem must be a result of domestic violence.
+  - name:
+      object: DAObject
+      item:
+        name: HCED2c
+    counties:
+    typeofhousing:
+    specialpopulation:
+    problem:
+    stage:
+    opposingparty:
+      - FAIRFIELD VALLEY VIEW LLC
+      - BROAD OAK LTD
+      - VERSAILLES SENIOR CITIZENS HOUSING INC
+      - NEW WALNUT HILL LP
+      - SOUTH SANTA FE AVE LLC
+    destination: Housing and Comm. Econ. Dev.
+    facts:
+  - name:
+      object: DAObject
+      item:
+        name: HCED2d
+    counties:
+      - Lucas County
+    typeofhousing:
+    specialpopulation:
+    problem:
+    stage:
+    opposingparty:
+    destination: Housing and Comm. Econ. Dev.
+    facts:
+  - name:
+      object: DAObject
+      item:
+        name: HCED3
+    counties:
+      - Clark County
+      - Greene County
+      - Huron County
+      - Montgomery County
+    typeofhousing:
+      - A3
+    specialpopulation:
+    problem:
+      - Voucher Termination
+    stage:
+      - Received Notice
+      - Decision
+    opposingparty:
+    destination: Housing and Comm. Econ. Dev.
+    facts:
+  - name:
+      object: DAObject
+      item:
+        name: HCED6
+    counties:
+    typeofhousing:
+    specialpopulation:
+    problem:
+    stage:
+    opposingparty:
+      - TCCN HOMES II LIMITED PARTNERSHIP
+      - TCCN HOMES III LP
+      - TCCN HOMES I LP
+      - TCCN HOMES IV LP
+      - TCCN HOMES II LP
+      - TCCN HOMES I LIMITED PARTNERSHIP
+    destination: Housing and Comm. Econ. Dev.
+    facts:
+  - name:
+      object: DAObject
+      item:
+        name: HCED7
+    counties:
+    typeofhousing:
+    specialpopulation:
+    problem:
+    stage:
+    opposingparty:
+      - RIVERFRONT APTS LP
+    destination: Housing and Comm. Econ. Dev.
+    facts:
+

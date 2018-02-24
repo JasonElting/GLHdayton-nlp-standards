@@ -1,0 +1,45 @@
+metadata:
+  title: Multiple choice with default and help
+  short title: MC
+  example start: 4
+  example end: 4
+  documentation: "https://docassemble.org/docs/fields.html#code"
+---
+objects:
+  - protocols: DAList.using(object_type=DADict.using(object_type: DASet))
+  
+---
+mandatory: True
+code: |
+  multi_user = True
+---
+event: query_variables
+code: |
+  variables_as_json()
+---
+question: |
+  What is your brother's favorite
+  fruit?
+fields:
+  - Fruit: county_list
+    datatype: checkboxes
+    code: |
+      myoptions
+---
+code: |
+  myoptions = [
+                {'lucas': "Lucas",
+                 'default': True,
+                 'help': "Lucas County"},
+                {'montgomery': "Montgomery",
+                 'help': "Montgomery County"},
+                {'allen': "Allen",
+                 'help': "Allen County"}
+              ]
+---
+mandatory: True
+question: |
+  Use
+  [this link](${ interview_url_action('query_variables') })
+  to query the information from
+  another application.

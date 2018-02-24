@@ -1,0 +1,14 @@
+object: DAObject
+module: docassemble.base.util
+items:
+  - name:
+      object: DAObject
+    counties:
+      - Montgomery County
+      - Lucas County
+    destination: HCED
+  - name:
+      object: DAObject
+    counties:
+      - Montgomery County
+    destination: VLP
